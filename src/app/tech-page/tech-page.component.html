@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div *ngIf="tech" class="container">
+    <img [src]="tech.imageUrl" [alt]="tech.name" />
+
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{tech.name}}
+            </span>
+        </div>
+
+        <div class="desc">
+            {{tech.desc}}
+        </div>
+    
+    
+        <div class="tags">
+            <app-tags [techPageTags]="tech.tags"></app-tags>
+        </div>
+
+<div class="stars">
+    <h2>Rating:{{tech.stars}}<span class="fa fa-star checked"></span>   </h2>
+</div>
+        
+        <div class="price">
+            <span>{{tech.price|currency}}</span>
+            
+        </div>
+        
+    
+        
+
+        <button (click)="addToCart()">კალათაში დამატება</button>
+    </div>
+
+</div>

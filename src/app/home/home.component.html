@@ -1,0 +1,22 @@
+<app-search></app-search>
+<app-tags></app-tags>
+
+
+
+<ul>
+    <li *ngFor="let tech of techs">
+        <a routerLink="/tech/{{tech.id}}">
+          <div class="container">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="{{tech.imageUrl}}" alt="">
+                </div>
+                <div class="contentBx">
+                  <h2>{{tech.name}}</h2>
+                  <a href="#">Add To Cart</a>
+                                </div>
+          </div>
+    </div>
+   </a>
+ </li>
+</ul>
